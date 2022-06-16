@@ -1,0 +1,142 @@
+.navbar {
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #824801a7;
+  box-shadow: 13px 10px 20px 5px black;
+}
+.navbar a {
+  color: white;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  margin: 0 20px;
+  font-size: 1.2em;
+}
+.navbar ul li:hover {
+  transform: scale(1.06);
+  transition: 0.5s;
+}
+.navbar ul .active a {
+  color: #fa7e18;
+  font-weight: 600;
+}
+.navbar .logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+.navbar .menu-hamburger {
+  display: none;
+  width: 35px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 35px;
+}
+.navbar .mobile-menu {
+  margin-left: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/the-g5f2444ec9_1920.jpg");
+  background-size: cover;
+}
+
+/***************************************************************************************************/
+/********************************** Responsive ******************************************/
+/***************************************************************************************************/
+@media screen and (max-width: 930px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar .logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .navbar .menu-hamburger {
+    display: block;
+    z-index: 3;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #deb88726;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links ul li {
+    margin: 20px 0;
+    font-size: 1.5em;
+  }
+}
+.presentation {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 0 15px 50px black;
+}
+.presentation .containerPresentation {
+  width: 100%;
+  background: #ffffffd7;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.presentation .containerPresentation .containerImg img {
+  width: 100%;
+  border-radius: 15px;
+}
+.presentation .containerText {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+footer {
+  padding: 50px;
+}
+footer p {
+  font-size: 3rem;
+}
+
+.price h2 {
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
