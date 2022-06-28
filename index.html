@@ -5,54 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MonkeyDesign</title>
+    <!-- FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/8921e10786.js" crossorigin="anonymous"></script>
+    <title>MonkeysDev</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <header>
 
-        <nav class="navbar">
-            <a href="#" class="logo">MONKEYSDEV</a>
-            <div class="nav-links">
-                <ul>
-                    <li class="active"><a href="#">Accueil</a></li>
-                    <li><a href="#">Présentation</a></li>
-                    <li><a href="#">Projets de formation</a></li>
-                    <li><a href="#">Mes réalisations</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+    <!-- *********** SIDEBAR ************* -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="index.html" class="nav__logo-text">M</a>
             </div>
-            <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+
+            <div class="nav__menu">
+                <div class="menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#accueil" class="nav__link active-link">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#presentation" class="nav__link">Présentation</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#competences" class="nav__link">Compétences</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#realisation" class="nav__link">Réalisation</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="btn__share">
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
         </nav>
+    </aside>
 
-    </header>
 
-    <main>
-        <section class="presentation">
 
-            <div class="containerPresentation">
-                <div class="containerImg">
-                    <img src="./images/monkey-gc92cf1c0f_640.jpg" alt="">
-                </div>
-                <div class="containerText">
+    <!-- *********** MAIN ************* -->
+    <main class="main">
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla officiis doloremque quae deleniti
-                        molestias est temporibus cum eaque quod corrupti? Odit necessitatibus, ex vel sequi illo unde
-                        esse.
-                    </p>
-                </div>
-            </div>
-
-        </section>
     </main>
 
+    <!-- *********** FOOTER ************* -->
 
 
 
-    <script src="./index.js"></script>
 </body>
 
 </html>

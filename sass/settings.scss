@@ -1,66 +1,115 @@
+/****************************************************************************/
+/*************************** FONTS *****************************************/
+/**************************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*************************************************************************/
+/*************************** VARIABLE CSS *******************************/
+/***********************************************************************/
+
+:root {
+    /****** COLORS ******/
+    --hue-color: 242;
+
+    /*** HSL Color Mode ***/
+    --skin-color: hsl(342, 92%, 46%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 85%);
+    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --box-color: hsl(var(--hue-color), 14%, 10%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+
+    /***** Font & Typography *****/
+    --body-font: 'Poppins', sans-serif;
+
+    --biggest-font-size: 48px;
+    --h1-font-size: 36px;
+    --h2-font-size: 24px;
+    --h3-font-size: 20px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 13px;
+
+    /***** Font Weight *****/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /***** Margenes Bottom *****/
+    --mb-0-25: 4px;
+    --mb-0-5: 8px;
+    --mb-0-75: 12px;
+    --mb-1: 16px;
+    --mb-1-5: 24px;
+    --mb-2: 32px;
+    --mb-2-5: 40px;
+    --mb-3: 48px;
+
+    /***** Z Index *****/
+    --z-fixed: 10;
+    --z-modal: 100;
+}
+
+/***** Responsive Typography *****/
+@media screen and (max-width: 1024px) {
+    :root {
+        --biggest-font-size: 32px;
+        --h1-font-size: 24px;
+        --h2-font-size: 20px;
+        --h3-font-size: 18px;
+        --normal-font-size: 15px;
+        --small-font-size: 13px;
+        --smaller-font-size: 12px;
+    }
+}
+
+/*************************************************************************/
+/******************************* BASE ***********************************/
+/***********************************************************************/
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body,
+button,
+input {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../images/the-g5f2444ec9_1920.jpg");
-    background-size: cover;
+    background: var(--body-color);
+    color: var(--text-color);
 }
 
-/***************************************************************************************************/
-/********************************** Responsive ******************************************/
-/***************************************************************************************************/
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
 
-@media screen and (max-width:930px) {
+ul {
+    list-style-type: none;
+}
 
-    .navbar {
-        padding: 0;
+a {
+    text-decoration: none;
+}
 
-        .logo {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .menu-hamburger {
-            display: block;
-            z-index: 3;
-        }
+button {
+    cursor: pointer;
+
+    input {
+        border: none;
+        outline: none;
     }
-
-    .nav-links {
-        position: absolute;
-        background: #deb88726;
-        backdrop-filter: blur(7px);
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.3s ease;
-        z-index: 2;
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            li {
-                margin: 20px 0;
-                font-size: 1.5em;
-            }
-        }
-    }
-
-
-
 }

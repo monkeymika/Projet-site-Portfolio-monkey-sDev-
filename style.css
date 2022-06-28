@@ -1,142 +1,193 @@
-.navbar {
-  padding: 40px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #824801a7;
-  box-shadow: 13px 10px 20px 5px black;
-}
-.navbar a {
-  color: white;
-}
-.navbar ul {
-  display: flex;
-}
-.navbar ul li {
-  margin: 0 20px;
-  font-size: 1.2em;
-}
-.navbar ul li:hover {
-  transform: scale(1.06);
-  transition: 0.5s;
-}
-.navbar ul .active a {
-  color: #fa7e18;
-  font-weight: 600;
-}
-.navbar .logo {
-  font-size: 2em;
-  font-weight: bold;
-}
-.navbar .menu-hamburger {
-  display: none;
-  width: 35px;
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 35px;
-}
-.navbar .mobile-menu {
-  margin-left: 0;
+/****************************************************************************/
+/*************************** FONTS *****************************************/
+/**************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/*************************************************************************/
+/*************************** VARIABLE CSS *******************************/
+/***********************************************************************/
+:root {
+  /****** COLORS ******/
+  --hue-color: 242;
+  /*** HSL Color Mode ***/
+  --skin-color: hsl(342, 92%, 46%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 85%);
+  --body-color: hsl(var(--hue-color), 19%, 5%);
+  --box-color: hsl(var(--hue-color), 14%, 10%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+  /***** Font & Typography *****/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 48px;
+  --h1-font-size: 36px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  --smaller-font-size: 13px;
+  /***** Font Weight *****/
+  --font-medium: 500;
+  --font-bold: 600;
+  /***** Margenes Bottom *****/
+  --mb-0-25: 4px;
+  --mb-0-5: 8px;
+  --mb-0-75: 12px;
+  --mb-1: 16px;
+  --mb-1-5: 24px;
+  --mb-2: 32px;
+  --mb-2-5: 40px;
+  --mb-3: 48px;
+  /***** Z Index *****/
+  --z-fixed: 10;
+  --z-modal: 100;
 }
 
+/***** Responsive Typography *****/
+@media screen and (max-width: 1024px) {
+  :root {
+    --biggest-font-size: 32px;
+    --h1-font-size: 24px;
+    --h2-font-size: 20px;
+    --h3-font-size: 18px;
+    --normal-font-size: 15px;
+    --small-font-size: 13px;
+    --smaller-font-size: 12px;
+  }
+}
+/*************************************************************************/
+/******************************* BASE ***********************************/
+/***********************************************************************/
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
 }
 
 body {
+  background: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+button input {
+  border: none;
+  outline: none;
+}
+
+.sidebar {
+  position: fixed;
+  width: 100px;
   height: 100vh;
-  width: 100vw;
-  background-image: url("../images/the-g5f2444ec9_1920.jpg");
-  background-size: cover;
+  background: var(--body-color);
+  border-right: 1px solid var(--box-color);
 }
 
-/***************************************************************************************************/
-/********************************** Responsive ******************************************/
-/***************************************************************************************************/
-@media screen and (max-width: 930px) {
-  .navbar {
-    padding: 0;
-  }
-  .navbar .logo {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-  }
-  .navbar .menu-hamburger {
-    display: block;
-    z-index: 3;
-  }
-
-  .nav-links {
-    position: absolute;
-    background: #deb88726;
-    backdrop-filter: blur(7px);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100%;
-    transition: all 0.3s ease;
-    z-index: 2;
-  }
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .nav-links ul li {
-    margin: 20px 0;
-    font-size: 1.5em;
-  }
-}
-.presentation {
+.nav__logo {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  box-shadow: 0 15px 50px black;
+  left: 0;
+  right: 0;
+  top: 1.8rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--skin-color);
+  text-align: center;
+  margin: auto;
 }
-.presentation .containerPresentation {
-  width: 100%;
-  background: #ffffffd7;
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.presentation .containerPresentation .containerImg img {
-  width: 100%;
-  border-radius: 15px;
-}
-.presentation .containerText {
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.nav__logo .nav__logo-text {
+  font-size: 1.2rem;
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  line-height: 40px;
 }
 
-footer {
-  padding: 50px;
-}
-footer p {
-  font-size: 3rem;
+.nav__menu {
+  position: fixed;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+  width: 100vh;
 }
 
-.price h2 {
-  font-size: 3rem;
+.menu {
+  display: flex;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: -2px auto 0 auto;
+}
+
+.nav__link {
+  float: right;
+  height: 100%;
+  line-height: 100px;
+  padding: 0 1rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  position: relative;
+  transition: 2s;
+}
+
+.btn__share {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.fa-solid {
+  font-size: 2.5rem;
+}
+
+/******** Active Link **********/
+.nav__link.active-link,
+.nav__link:hover {
+  color: var(--skin-color);
+}
+
+.nav__link.nav__link.active-link::after,
+.nav__link:hover::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--skin-color);
+  border-radius: 50%;
+  bottom: 1.8rem;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
