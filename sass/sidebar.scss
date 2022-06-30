@@ -35,7 +35,6 @@
 
 .menu {
     display: flex;
-
 }
 
 .nav__list {
@@ -52,7 +51,11 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
-    transition: 2s;
+    transition: 0.5s;
+
+    &:hover {
+        transform: rotateZ(90deg)
+    }
 }
 
 .btn__share {
