@@ -1,0 +1,112 @@
+.presentation__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    align-items: center;
+}
+
+.presentation__img {
+    width: 365px;
+    border-radius: 0.90rem;
+    justify-self: center;
+}
+
+.presentation__heading {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.presentation__description {
+    text-align: justify;
+    padding-right: 6rem;
+    margin-bottom: var(--mb-2);
+}
+
+.presentation__info {
+    grid-template-columns: repeat(3, 140px);
+    column-gap: 1.5rem;
+    margin-bottom: var(--mb-3);
+}
+
+.presentation__box {
+    text-align: center;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    background: var(--box-color);
+    box-shadow: black 8px 10px 8px 4px;
+}
+
+.presentation__icon {
+    font-size: 1.5rem;
+    color: var(--skin-color);
+    margin-bottom: var(--mb-0-75);
+}
+
+.presentation__title {
+    font-size: var(--small-font-size);
+}
+
+.presentation__subtitle {
+    font-size: var(--smaller-font-size);
+}
+
+/*************************************************************************/
+/***************************** RESPONSIVE *******************************/
+/***********************************************************************/
+@media screen and (max-width: 1216px) {
+    .presentation__container {
+        column-gap: 2.5rem;
+    }
+
+    .presentation__description {
+        padding-right: 0;
+    }
+
+    .presentation__container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .presentation__img {
+        width: 350px;
+    }
+
+    .presentation__data {
+        text-align: center;
+    }
+
+    .presentation__info {
+        justify-content: center;
+    }
+
+    .presentation__box {
+        padding: .75rem .5rem;
+    }
+
+    .presentation__description {
+        padding: 0 4rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .presentation__img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .presentation__info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .presentation__description {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .presentation__info {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: .5rem;
+    }
+}

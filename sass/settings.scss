@@ -13,11 +13,11 @@
     --hue-color: 242;
 
     /*** HSL Color Mode ***/
-    --skin-color: hsl(177, 84%, 30%);
+    --skin-color: #02583f;
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
-    --body-color: hsl(var(--hue-color), 19%, 5%);
-    --box-color: hsl(var(--hue-color), 14%, 10%);
+    --body-color: #050505;
+    --box-color: #101010;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
 
@@ -81,8 +81,12 @@ input {
 }
 
 body {
-    background: var(--body-color);
     color: var(--text-color);
+    background-color: #595959;
+    background-image: linear-gradient(62deg, #595959 0%, #262626 50%, #0d0d0d 100%);
+
+
+
 }
 
 h1,
@@ -112,4 +116,19 @@ button {
         border: none;
         outline: none;
     }
+}
+
+/*************************************************************************/
+/***************************** SCROLL BAR *******************************/
+/***********************************************************************/
+
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
 }

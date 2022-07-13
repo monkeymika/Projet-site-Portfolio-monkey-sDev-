@@ -1,7 +1,14 @@
 @import "./sass/settings.scss";
 @import "./sass/sidebar.scss";
-@import "./sass/main.accueil.scss";
 @import "./sass/layout.scss";
 @import "./sass/mixin.scss";
-@import "./sass/main.presentation.scss";
-@import "./sass/main.competences.scss";
+@import "./sass/main/main.accueil.scss";
+@import "./sass/main/main.presentation.scss";
+@import "./sass/main/main.competences.scss";
+@import "./sass/main/main.skills.scss";
+@import "./sass/main/main.realisation.scss";
+@import "./sass/main/main.portfolioPopup.scss";
+@import "./sass/main/main.services.scss";
+@import "./sass/main/main.testimonial.scss";
+@import "./sass/main/main.contact.scss";
+@import "./sass/footer.scss";

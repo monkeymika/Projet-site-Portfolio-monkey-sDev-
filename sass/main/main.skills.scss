@@ -1,0 +1,115 @@
+.skills__container {
+    grid-template-columns: 360px 320px;
+    column-gap: 3rem;
+    justify-content: center;
+}
+
+.skills__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        margin-bottom: var(--mb-2-5);
+    }
+}
+
+.skills__icon,
+.skills__arrow {
+    font-size: 2rem;
+    color: var(--skin-color);
+}
+
+.skills__icon {
+    margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__subtitle {
+    font-size: var(--small-font-size);
+}
+
+.skills__arrow {
+    margin-left: auto;
+}
+
+.skills__active .skills__arrow {
+    transform: rotate(-90deg);
+    transition: .3s;
+}
+
+.skills [data-content] {
+    display: none;
+}
+
+.skills__active[data-content] {
+    display: block;
+}
+
+.skills__list {
+    row-gap: 1.8rem;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills__bar {
+    background-color: var(--box-color);
+}
+
+.skills__percentage {
+    display: block;
+    background-color: var(--skin-color);
+}
+
+
+/*************************************************************************/
+/***************************** RESPONSIVE *******************************/
+/***********************************************************************/
+
+@media screen and (max-width: 1024px) {
+    .skills__container {
+        grid-template-columns: 340px 300px;
+    }
+
+    .skills__list {
+        row-gap: 1.7rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .skills__container {
+        grid-template-columns: 300px;
+        row-gap: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills__title {
+        font-size: var(--normal-font-size);
+    }
+}

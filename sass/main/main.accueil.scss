@@ -4,7 +4,7 @@
 
 /******** Section Accueil  ********/
 .accueil {
-    background: url("../images/monkeyBlack.jpg");
+    background: url("../images/gorilla.jpg");
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -144,4 +144,90 @@
         font-size: 1.5rem;
     }
 
+}
+
+/*************************************************************************/
+/***************************** RESPONSIVE *******************************/
+/***********************************************************************/
+@media screen and (max-width: 1408px) {
+    .container {
+        margin-left: var(--mb-2-5);
+        margin-right: var(--mb-2-5);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .accueil {
+        background-image: none;
+        height: initial;
+        align-items: initial;
+        padding: 7rem 0 2rem;
+    }
+
+    .accueil__container {
+        row-gap: 2rem;
+
+    }
+
+    .accueil__img {
+        display: block;
+        width: 250px;
+        justify-self: center;
+    }
+
+    .my__info {
+        display: none;
+    }
+
+    .accueil__social {
+        left: initial;
+        right: -1rem;
+        flex-direction: column;
+        row-gap: 3.5rem;
+    }
+
+    .accueil__social-follow {
+        font-size: var(--smaller-font-size);
+        transform: rotate(90deg);
+    }
+
+    .accueil__social-links {
+        flex-direction: column;
+        row-gap: .25rem;
+    }
+
+    .accueil__social-link {
+        font-size: var(--normal-font-size);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .accueil__img {
+        width: 200px;
+    }
+
+    .accueil__title {
+        font-size: var(--h1-font-size);
+    }
+
+    .accueil__subtitle {
+        font-size: var(--normal-font-size);
+    }
 }

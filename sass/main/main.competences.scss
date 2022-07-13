@@ -1,5 +1,5 @@
 .competences__container {
-    grid-template-columns: repeat(2, 340px);
+    grid-template-columns: repeat(1, 340px);
     column-gap: 3rem;
     justify-content: center;
 }
@@ -63,4 +63,29 @@
     column-gap: .4rem;
     font-size: var(--small-font-size);
     color: var(--skin-color);
+}
+
+/*************************************************************************/
+/***************************** RESPONSIVE *******************************/
+/***********************************************************************/
+
+@media screen and (max-width: 1024px) {
+    .competences__container {
+        grid-template-columns: repeat(2, 290px);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .competences__container {
+        grid-template-columns: 290px;
+        row-gap: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .competences__container {
+        grid-template-columns: 1fr;
+    }
 }

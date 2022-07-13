@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FONTAWESOME-->
+    <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/8921e10786.js" crossorigin="anonymous"></script>
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="./assets/swiper-bundle.min.css">
+
+
     <title>MonkeysDev</title>
 
     <link rel="stylesheet" href="./style.css">
@@ -16,11 +22,13 @@
 
 
     <!-- *********** SIDEBAR ************* -->
-
+    <div class="nav__toggle" id="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
     <aside class="sidebar" id="sidebar">
         <nav class="nav">
             <div class="nav__logo">
-                <a href="index.html" class="nav__logo-text">M</a>
+                <a href="index.html" class="nav__logo-text">MonkeysDev</a>
             </div>
 
             <div class="nav__menu">
@@ -30,13 +38,13 @@
                             <a href="#accueil" class="nav__link active-link">Accueil</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#presentation" class="nav__link">Présentation</a>
+                            <a href="#about" class="nav__link">À propos</a>
                         </li>
+                        <!-- <li class="nav__item">
+                            <a href="#skills" class="nav__link">Skills</a>
+                        </li> -->
                         <li class="nav__item">
-                            <a href="#competences" class="nav__link">Compétences</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#realisation" class="nav__link">Réalisation</a>
+                            <a href="#work" class="nav__link">Réalisations</a>
                         </li>
                         <li class="nav__item">
                             <a href="#services" class="nav__link">Services</a>
@@ -48,8 +56,9 @@
                 </div>
             </div>
 
-            <div class="btn__share">
-                <i class="fa-solid fa-share-nodes"></i>
+
+            <div class="nav__close" id="nav-close">
+                <i class="fa-solid fa-xmark"></i>
             </div>
         </nav>
     </aside>
@@ -57,7 +66,6 @@
     <!-- *********** MAIN ************* -->
 
     <main class="main">
-
         <!-- ******* Accueil ********** -->
 
         <section class="accueil" id="accueil">
@@ -77,12 +85,12 @@
                 <img src="./images/photoProfil.jpg" alt="" class="accueil__img">
 
                 <div class="accueil__data">
-                    <h1 class="accueil__title">Bonjour, je suis mika</h1>
+                    <h1 class="accueil__title">MonkeysDev</h1>
                     <h3 class="accueil__subtitle">Developpeur Frontend</h3>
-                    <p class="accueil__description">Réalisation de site web clé en main et accompagnement pour la
-                        création</p>
-                    <a href="#presentation" class="button"><i class="fa-solid fa-circle-user button__icon"></i>
-                        En savoir plus à propos de moi
+                    <p class="accueil__description">Réalisation de site web clé en main et accompagnement dans le
+                        processus de création</p>
+                    <a href="#about" class="button"><i class="fa-solid fa-circle-user button__icon"></i>
+                        En savoir plus
                     </a>
                 </div>
 
@@ -119,8 +127,8 @@
 
         <!-- ******* Présentation ********** -->
 
-        <section class="presentation section" id="presentation">
-            <h2 data-heading="Mon intro" class="section__title">A propos de moi</h2>
+        <section class="about section" id="about">
+            <h2 data-heading="Mon intro" class="section__title">À propos</h2>
 
             <div class="presentation__container container grid">
                 <img src="./images/photoProfilBig.jpg" alt="" class="presentation__img">
@@ -139,7 +147,7 @@
 
                         <div class="presentation__box">
                             <i class="fa-solid fa-suitcase presentation__icon"></i>
-                            <h3 class="presentation__title">Réalisaton</h3>
+                            <h3 class="presentation__title">Réalisations</h3>
                             <span class="presentation__subtitle">3 Projets</span>
                         </div>
 
@@ -158,7 +166,7 @@
 
         <!-- ******* Compétences ********** -->
 
-        <section class="competences section">
+        <!-- <section class="competences section">
             <h2 data-heading="Mon parcours" class="section__title">Compétences</h2>
 
             <div class="competences__container container grid">
@@ -180,28 +188,656 @@
                     </div>
                 </div>
 
-                <div class="Experience">
-                    <h3 class="competences__title">
-                        <i class="fa-solid fa-briefcase"></i> Experience
-                    </h3>
+            </div>
+        </section> -->
 
-                    <div class="timeline">
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">Freelance</h3>
-                            <p class="timeline__text"> lorem</p>
-                            <span class="timeline__date"><i class="fa-solid fa-calendar-days"></i>
-                                Aujourd'hui
-                            </span>
+        <!-- ******* Skills ********** -->
+
+        <!-- <section class="skills section" id="skills">
+            <h2 data-heading="My abilities" class="section__title">My Experience</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__tabs">
+                    <div class="skills__header skills__active" data-target="#frontend">
+                        <i class="fa-solid fa-code skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">Developpeur Frontend</h1>
+                            <span class="skills__subtitle">Plus de 4 ans</span>
                         </div>
+
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__header" data-target="#backend">
+                        <i class="fa-solid fa-swatchbook skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">Backend</h1>
+                            <span class="skills__subtitle">lorem</span>
+                        </div>
+
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__header" data-target="#design">
+                        <i class="fa-solid fa-swatchbook skills__icon"></i>
+
+                        <div>
+                            <h1 class="skills__title">Design</h1>
+                            <span class="skills__subtitle">lorem</span>
+                        </div>
+
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <div class="skills__group skills__active" data-content id="frontend">
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">JavaScript</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 70%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">NodeJs</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__group" data-content id="backend">
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">PHP</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">MySQL</h3>
+                                <span class="skills__number">70%</span>
+                            </div>
+
+                            <div class="skills__bar">
+                                <span class="skills__percentage" style="width: 70%;"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Firebase</h3>
+                                <span class="skills__number">70%</span>
+                            </div>
+
+                            <div class="skills__bar">
+                                <span class="skills__percentage" style="width: 70%;"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skills__group" data-content id="design">
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Wordpress</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 60%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Sketch</h3>
+                                <span class="skills__number">80%</span>
+                            </div>
+
+                            <div class="skills__bar">
+                                <span class="skills__percentage" style="width: 80%;"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Photoshop</h3>
+                                <span class="skills__number">70%</span>
+                            </div>
+
+                            <div class="skills__bar">
+                                <span class="skills__percentage" style="width: 70%;"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ******* Realisation ********** -->
+
+        <section class="work section" id="work">
+            <h2 data-heading="My Portfolio" class="section__title">Mes réalisations</h2>
+
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter="all">Voir tout</span>
+                <span class="work__item" data-filter=".web">Site Web</span>
+                <span class="work__item" data-filter=".app">Projet de formation</span>
+                <span class="work__item" data-filter=".design">Projet perso</span>
+            </div>
+
+            <div class="work__container container grid">
+                <div class="work__card mix web">
+                    <img src="./images/work-1.webp" alt="" class="work__img">
+                    <h3 class="work__title">ClemaConseil</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">The service provide for design</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work__card mix app">
+                    <img src="./images/work-2.webp" alt="" class="work__img">
+                    <h3 class="work__title">Booki</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Intégration de maquette - Réservation d'hotel</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work__card mix design">
+                    <img src="./images/work-3.webp" alt="" class="work__img">
+                    <h3 class="work__title">Brand Design</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Logo design creativity & application</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work__card mix app">
+                    <img src="./images/work-4.webp" alt="" class="work__img">
+                    <h3 class="work__title">OhmyFood</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Application mobile reservation de restaurant</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work__card mix web">
+                    <img src="./images/work-5.webp" alt="" class="work__img">
+                    <h3 class="work__title">CryptoResto</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Design for technology and service</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work__card mix design">
+                    <img src="./images/work-6.webp" alt="" class="work__img">
+                    <h3 class="work__title">Web Design</h3>
+                    <span class="work__button">Demo
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">App for technologie & services</h3>
+                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Numquam esse possimus minima.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>html css</span></li>
+                            <li>Role - <span>frontend</span></li>
+                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ******* Portfolio Popup ********** -->
+        <div class="portfolio__popup">
+            <div class="portfolio__popup-inner">
+                <div class="portfolio__popup-content grid">
+                    <span class="portfolio__popup-close"><i class="fa-solid fa-xmark"></i></span>
+                    <div class="pp__thumbnail">
+                        <img src="./images/work-2.webp" alt="" class="portfolio__popup-img"></im>
+                    </div>
+                    <div class="portfolio__popup-info">
+                        <div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+                        <div class="portfolio__popup-body">
+                            <h3 class="details__title">App for technologie & services</h3>
+                            <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Numquam esse possimus minima.</p>
+                            <ul class="details__info">
+                                <li>Created - <span>4 dec 2020</span></li>
+                                <li>Technologies - <span>html css</span></li>
+                                <li>Role - <span>frontend</span></li>
+                                <li>Voir - <span><a href="#">www.domain.com</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ******* Services ********** -->
+        <section class="services section" id="services">
+            <h2 data-heading="Services" class="section__title">Mes services</h2>
+
+            <div class="services__container container grid">
+                <div class="services__content">
+                    <div>
+                        <i class="fa-solid fa-square-plus services__icon"></i>
+                        <h3 class="services__title">Web <br> designer</h3>
+                    </div>
+
+                    <span class="services__button">
+                        Voir plus <i class="fa-solid fa-arrow-right services__button-icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class="fa-solid fa-xmark services__modal-close"></i>
+
+                            <h3 class="services__modal-title">Web Designer</h3>
+                            <p class="services__modal-description">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit. Nobis fugiat similique voluptate explicabo iure odio vel voluptatem ipsum
+                                illopraesentium!</p>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conception de la maquette</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Creation du site internet</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conseil et accompagnement</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Optimisation de votre marque</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Design moderne</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="services__content">
+                    <div>
+                        <i class="fa-solid fa-code services__icon"></i>
+                        <h3 class="services__title">UI/UX <br> designer</h3>
+                    </div>
+
+                    <span class="services__button">
+                        Voir plus <i class="fa-solid fa-arrow-right services__button-icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class="fa-solid fa-xmark services__modal-close"></i>
+
+                            <h3 class="services__modal-title">UI/UX Designer</h3>
+                            <p class="services__modal-description">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit. Nobis fugiat similique voluptate explicabo iure odio vel voluptatem ipsum
+                                illopraesentium!</p>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conception de la maquette</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Creation du site internet</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conseil et accompagnement</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Optimisation de votre marque</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Design moderne</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__content">
+                    <div>
+                        <i class="fa-solid fa-pen-to-square services__icon"></i>
+                        <h3 class="services__title">Branding <br> designer</h3>
+                    </div>
+
+                    <span class="services__button">
+                        Voir plus <i class="fa-solid fa-arrow-right services__button-icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class="fa-solid fa-xmark services__modal-close"></i>
+
+                            <h3 class="services__modal-title">Branding Designer</h3>
+                            <p class="services__modal-description">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit. Nobis fugiat similique voluptate explicabo iure odio vel voluptatem ipsum
+                                illopraesentium!</p>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conception de la maquette</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Creation du site internet</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Conseil et accompagnement</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Optimisation de votre marque</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="fa-solid fa-circle-check services__modal-icon"></i>
+                                    <p class="services__modal-info">Design moderne</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ******* Temoignages ********** -->
+        <section class="testimonials section">
+            <h2 data-heading="Parole de client" class="section__title">Témoignages</h2>
+
+            <div class="testimonials__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim corporis incidunt debitis.</p>
+                        <h3 class="testimonial__date">02/06/2022</h3>
+                        <img src="./images/client2.jpg" alt="" class="testimonial__profile-img">
+
+                        <div class="testimonial__profile-data">
+                            <span class="testimonial__profile-name">Levi Ackerman</span>
+                            <span class="testimonial__profile-detail">Createur CryptoResto</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim corporis incidunt debitis.</p>
+                        <h3 class="testimonial__date">15/07/2022</h3>
+                        <img src="./images/client3.jpg" alt="" class="testimonial__profile-img">
+
+                        <div class="testimonial__profile-data">
+                            <span class="testimonial__profile-name">Derya Uckar</span>
+                            <span class="testimonial__profile-detail">ClemaConseil</span>
+                        </div>
+                    </div>
+                    <div class="testimonial__card swiper-slide">
+                        <div class="testimonial__quote">
+                            <i class='bx bxs-quote-alt-left'></i>
+                        </div>
+                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim corporis incidunt debitis.</p>
+                        <h3 class="testimonial__date">15/07/2022</h3>
+                        <img src="./images/client1.jpg" alt="" class="testimonial__profile-img">
+
+                        <div class="testimonial__profile-data">
+                            <span class="testimonial__profile-name">Derya Uckar</span>
+                            <span class="testimonial__profile-detail">ClemaConseil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- ******* Contact ********** -->
+        <section class="contact section" id="contact">
+            <h2 data-heading="Get in touch" class="section__title">Contact</h2>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="fa-regular fa-envelope contact__card-icon"></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">monkeysdev.contact@gmail.com</span>
+                            <span class="contact__button">
+                                Ecrivez-moi <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="fa-brands fa-whatsapp contact__card-icon"></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">06-06-06-06-06</span>
+                            <span class="contact__button">
+                                Ecrivez-moi <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class="fa-brands fa-facebook-messenger contact__card-icon"></i>
+                            <h3 class="contact__card-title">Messenger</h3>
+                            <span class="contact__card-data">user@gmail.com</span>
+                            <span class="contact__button">
+                                Ecrivez-moi <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <form action="" class="contact__form">
+                        <div class="input__container">
+                            <input type="text" class="input">
+                            <label for="">Nom</label>
+                            <span>Nom</span>
+                        </div>
+                        <div class="input__container">
+                            <input type="email" class="input">
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input__container">
+                            <input type="tel" class="input">
+                            <label for="">Téléphone</label>
+                            <span>Téléphone</span>
+                        </div>
+                        <div class="input__container textarea">
+                            <textarea name="" id="" class="input"></textarea>
+                            <label for="">Message</label>
+                            <span>Message</span>
+                        </div>
+                        <button type="submit" class="button"><i class="fa-solid fa-play button__icon"></i>
+                            Envoyez le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- *********** FOOTER ************* -->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Mika</h1>
+                        <span class="footer__subtitle">Développeur Frontend</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#work" class="footer__link">Mes réalisations</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="footer__social">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; MonkeysDev. Tous droits réservé</p>
+            </div>
+        </footer>
     </main>
 
-    <!-- *********** FOOTER ************* -->
+
+    <!-- *********** SCROLL UP ************* -->
+
+    <!-- *********** MIXUP FILTER ************* -->
+    <script src="./assets/mixitup.min.js"></script>
+
+    <!-- *********** SWIPER JS ************* -->
+    <script src="./assets/swiper-bundle.min.js"></script>
+    <!-- *********** MAIN JS ************* -->
+    <script src="./main.js"></script>
 
 
 
