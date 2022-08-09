@@ -7,14 +7,21 @@
 .services__content {
     position: relative;
     background-color: var(--box-color);
-    padding: 6rem 0 2rem 2.5rem;
+    padding: 6rem 2rem 2rem 2.5rem;
     border-radius: .25rem;
     box-shadow: black 8px 10px 8px 4px;
+
+    i,
+    h3 {
+        text-align: center;
+    }
+
+
 }
 
 .services__icon {
     display: block;
-    font-size: 1.8rem;
+    font-size: 4rem;
     color: var(--skin-color);
     margin-bottom: var(--mb-1);
 }
@@ -30,6 +37,7 @@
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: .25rem;
     cursor: pointer;
 }
@@ -63,7 +71,6 @@
 
 
 .services__modal-content {
-    width: 500px;
     position: relative;
     background-color: var(--box-color);
     padding: 4.5rem 2.5rem 2.5rem;
@@ -122,6 +129,11 @@
     visibility: visible;
 }
 
+.container_div {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
 
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/

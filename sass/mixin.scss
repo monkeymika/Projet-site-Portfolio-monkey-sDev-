@@ -4,8 +4,16 @@
 
 .section__title {
     text-align: center;
-    font-size: var(--h1-font-size);
+    font-size: 3.5rem;
     margin-bottom: var(--mb-3);
+    // image de fond sur du texte
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(0deg, #012326 0%, #014034 30%, #02735e 66%, #0aa67a 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    color: transparent;
 
     &::before {
         content: attr(data-heading);
@@ -14,4 +22,13 @@
         font-weight: var(--font-medium);
         color: var(--skin-color);
     }
+}
+
+@media screen and (max-width: 576px) {
+
+    .section__title {
+        font-size: 2rem;
+    }
+
+
 }

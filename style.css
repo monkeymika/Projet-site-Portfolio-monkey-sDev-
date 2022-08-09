@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****************************************************************************/
 /*************************** FONTS *****************************************/
 /**************************************************************************/
@@ -9,13 +10,13 @@
   /****** COLORS ******/
   --hue-color: 242;
   /*** HSL Color Mode ***/
-  --skin-color: #02583f;
+  --skin-color: #014034;
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 85%);
   --body-color: #050505;
   --box-color: #101010;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
-  --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+  --scroll-bar-color: #101010;
+  --scroll-thumb-color: #2a2929;
   /***** Font & Typography *****/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 48px;
@@ -125,6 +126,8 @@ button input {
   background: var(--box-color);
   transition: 0.5s;
   box-shadow: black 7px 4px 8px 3px;
+  background: url("../images/jungle4.jpg");
+  background-size: cover;
 }
 
 .nav__logo {
@@ -216,18 +219,13 @@ button input {
 }
 
 /******** Active Link **********/
-.nav__link.active-link,
-.nav__link:hover {
-  color: var(--skin-color);
-}
-
 .nav__link.nav__link.active-link::after,
 .nav__link:hover::after {
   position: absolute;
   content: "";
   width: 15px;
   height: 2px;
-  background: var(--skin-color);
+  background: #0aa67a;
   bottom: 1.8rem;
   left: 0;
   right: 0;
@@ -311,8 +309,15 @@ button input {
 
 .section__title {
   text-align: center;
-  font-size: var(--h1-font-size);
+  font-size: 3.5rem;
   margin-bottom: var(--mb-3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(0deg, #012326 0%, #014034 30%, #02735e 66%, #0aa67a 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+  color: transparent;
 }
 .section__title::before {
   content: attr(data-heading);
@@ -322,6 +327,11 @@ button input {
   color: var(--skin-color);
 }
 
+@media screen and (max-width: 576px) {
+  .section__title {
+    font-size: 2rem;
+  }
+}
 .main {
   margin-left: 100px;
 }
@@ -330,6 +340,7 @@ button input {
 .accueil {
   background: url("../images/gorilla.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   height: 100vh;
 }
@@ -383,6 +394,7 @@ button input {
 
 .accueil__title {
   font-size: var(--biggest-font-size);
+  font-weight: 900;
 }
 
 .accueil__subtitle {
@@ -432,14 +444,15 @@ button input {
 .button {
   display: inline-flex;
   align-items: center;
-  column-gap: 0.5rem;
+  column-gap: 1rem;
   background-color: var(--skin-color);
   color: var(--title-color);
-  padding: 0.75rem 1.4rem;
+  padding: 1rem 1.4rem;
   border-radius: 0.25rem;
   font-weight: var(--font-medium);
   position: relative;
   z-index: 1;
+  box-shadow: black 7px 8px 8px 0px;
 }
 .button::after {
   position: absolute;
@@ -448,12 +461,16 @@ button input {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #343a40;
+  background-color: #02735e;
   z-index: -1;
   transform-origin: center;
   transform: scale(0);
   border-radius: 0.25rem;
   transition: 0.8s;
+}
+.button:hover {
+  transform: scale(1.05);
+  transition: 1.5s;
 }
 .button:hover::after {
   transform: scale(1);
@@ -591,6 +608,15 @@ button input {
 
 .presentation__subtitle {
   font-size: var(--smaller-font-size);
+}
+
+h3 span {
+  color: #0aa67a;
+  font-size: 2rem;
+}
+h3 span::before {
+  content: "développeur freelance";
+  animation: text-apparition 5s infinite;
 }
 
 /*************************************************************************/
@@ -1097,14 +1123,18 @@ button input {
 .services__content {
   position: relative;
   background-color: var(--box-color);
-  padding: 6rem 0 2rem 2.5rem;
+  padding: 6rem 2rem 2rem 2.5rem;
   border-radius: 0.25rem;
   box-shadow: black 8px 10px 8px 4px;
+}
+.services__content i,
+.services__content h3 {
+  text-align: center;
 }
 
 .services__icon {
   display: block;
-  font-size: 1.8rem;
+  font-size: 4rem;
   color: var(--skin-color);
   margin-bottom: var(--mb-1);
 }
@@ -1120,6 +1150,7 @@ button input {
   font-size: var(--small-font-size);
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 0.25rem;
   cursor: pointer;
 }
@@ -1151,7 +1182,6 @@ button input {
 }
 
 .services__modal-content {
-  width: 500px;
   position: relative;
   background-color: var(--box-color);
   padding: 4.5rem 2.5rem 2.5rem;
@@ -1208,6 +1238,12 @@ button input {
   visibility: visible;
 }
 
+.container_div {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/
 /***********************************************************************/
@@ -1257,10 +1293,9 @@ button input {
 }
 .testimonial__card {
   background-color: var(--box-color);
-  padding: 3rem;
-  border-radius: 50%;
+  padding: 1.8rem 2rem;
+  border-radius: 0.5rem;
   margin-bottom: 3rem;
-  text-align: center;
 }
 
 .testimonial__quote {
@@ -1334,6 +1369,10 @@ button input {
   column-gap: 3rem;
   justify-content: center;
   align-items: center;
+}
+
+.contact__content {
+  text-align: center;
 }
 
 .contact__info {
@@ -1590,6 +1629,20 @@ textarea.input {
 
   .footer__links {
     justify-self: flex-start;
+  }
+}
+@keyframes text-apparition {
+  0% {
+    content: "développeur freelance";
+  }
+  25% {
+    content: "expert wordpress";
+  }
+  50% {
+    content: "site web sur mesure";
+  }
+  75% {
+    content: "réalisateur de projet web";
   }
 }
 

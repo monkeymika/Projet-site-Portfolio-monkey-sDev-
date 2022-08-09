@@ -49,6 +49,21 @@
     font-size: var(--smaller-font-size);
 }
 
+
+// Animation du titre de présentation
+h3 {
+
+    span {
+        color: #0aa67a;
+        font-size: 2rem;
+    }
+
+    span::before {
+        content: "développeur freelance";
+        animation: text-apparition 5s infinite;
+    }
+}
+
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/
 /***********************************************************************/
