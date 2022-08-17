@@ -5,31 +5,10 @@
     background: var(--box-color);
     transition: .5s;
     box-shadow: black 7px 4px 8px 3px;
-
-
-    background: url("../images/jungle4.jpg");
-    background-size: cover;
-
 }
 
-.nav__logo {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.8rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--skin-color);
-    text-align: center;
-    margin: auto;
-}
-
-.nav__logo-text {
-    font-size: 1.2rem;
-    color: var(--title-color);
-    font-weight: var(--font-bold);
-    line-height: 40px;
+.nav__social {
+    display: flex;
 }
 
 .nav__menu {
@@ -49,6 +28,30 @@
     margin: 4px auto 0 auto;
 }
 
+.nav__social-links {
+    margin: 15px;
+
+    a {
+        color: white;
+    }
+
+    &:hover {
+        transform: translateY(10px);
+        transition: 2s;
+
+    }
+
+    i {
+        font-size: 1.5rem;
+
+        &:hover {
+            color: #0aa67a;
+            transition: 1s;
+        }
+    }
+
+}
+
 .nav__link {
     float: right;
     height: 100%;
@@ -57,7 +60,7 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
-    transition: 0.5s;
+    transition: 1s;
 
     &:hover {
         transform: rotateZ(90deg)
@@ -102,14 +105,11 @@
 }
 
 /******** Active Link **********/
-
-
-
 .nav__link.nav__link.active-link::after,
 .nav__link:hover::after {
     position: absolute;
     content: '';
-    width: 15px;
+    width: 35px;
     height: 2px;
     background: #0aa67a;
     bottom: 1.8rem;
@@ -123,10 +123,16 @@
 /***********************************************************************/
 
 @media screen and (max-width: 1024px) {
+    .container {
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
     .sidebar {
         width: 100%;
         z-index: 999;
         transform: translateX(-100%);
+        box-shadow: none;
     }
 
     .show-sidebar {

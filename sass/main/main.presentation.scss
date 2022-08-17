@@ -49,7 +49,6 @@
     font-size: var(--smaller-font-size);
 }
 
-
 // Animation du titre de présentation
 h3 {
 
@@ -59,7 +58,7 @@ h3 {
     }
 
     span::before {
-        content: "développeur freelance";
+        content: "Développeur freelance";
         animation: text-apparition 5s infinite;
     }
 }
@@ -119,7 +118,23 @@ h3 {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 460px) {
+    .presentation__heading {
+        span {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 317px) {
+    .presentation__heading {
+        span {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 418px) {
     .presentation__info {
         grid-template-columns: repeat(2, 1fr);
         row-gap: .5rem;

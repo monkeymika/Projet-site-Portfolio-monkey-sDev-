@@ -2,72 +2,39 @@
     margin-left: 100px;
 }
 
-
 /******** Section Accueil  ********/
 .accueil {
+    height: 100vh;
     background: url("../images/gorilla.jpg");
     background-size: cover;
-
-    background-attachment: fixed;
     background-position: center center;
-    height: 100vh;
-
-}
-
-
-.accueil__container {
-    position: relative;
-    height: 100%;
-    align-items: center;
-}
-
-.accueil__social {
-    position: absolute;
-    top: 1.8rem;
-    left: 0;
-    display: flex;
-    align-items: center;
-    column-gap: 3.5rem;
-}
-
-
-.accueil__social-follow {
-    font-weight: var(--font-medium);
-    position: relative;
-}
-
-.accueil__social-follow::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2px;
-    background-color: var(--text-color);
-    right: -45%;
-    top: 50%;
-}
-
-.accueil__social-links {
-    display: inline-flex;
-    column-gap: 1rem;
-
-    .accueil__social-link {
-        font-size: 1.1rem;
-        color: var(--text-color);
-        transition: .4s;
-
-        &:hover {
-            transform: translateY(.30rem);
-        }
-    }
-}
-
-.accueil__img {
-    display: none;
+    background-attachment: fixed;
 }
 
 .accueil__title {
-    font-size: var(--biggest-font-size);
+    font-size: 12rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(0deg, #012326 0%, #014034 30%, #02735e 66%, #0aa67a 100%);
+    background-attachment: fixed;
+    background-size: cover;
+    color: transparent;
     font-weight: 900;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: show 0.8s 0.2s ease-out forwards;
+}
+
+.accueil__subtitle {
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: show 0.8s 0.4s ease-out forwards;
+}
+
+.accueil__container {
+    height: 100%;
+    align-items: center;
 }
 
 .accueil__subtitle {
@@ -79,6 +46,22 @@
 .accueil__description {
     max-width: 450px;
     margin-bottom: var(--mb-2);
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: show 0.8s 0.6s ease-out forwards;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 35px;
+
+    img {
+        position: fixed;
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: show 0.8s 0.2s ease-out forwards;
+    }
 }
 
 .my__info {
@@ -127,7 +110,9 @@
     position: relative;
     z-index: 1;
     box-shadow: black 7px 8px 8px 0px;
-
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: show 0.8s 1s ease-out forwards;
 
     &::after {
         position: absolute;
@@ -162,13 +147,30 @@
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/
 /***********************************************************************/
+
+@media screen and (max-width: 1543px) {
+    .accueil__social {
+        position: relative;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 1408px) {
     .container {
         margin-left: var(--mb-2-5);
         margin-right: var(--mb-2-5);
     }
+
+    .accueil__title {
+        font-size: 9rem;
+    }
 }
 
+@media screen and (max-width: 1093px) {
+    .accueil__title {
+        font-size: 6rem;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     .container {
@@ -179,25 +181,33 @@
     .main {
         margin-left: 0;
     }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .accueil__title {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .accueil {
-        background-image: none;
-        height: initial;
         align-items: initial;
         padding: 7rem 0 2rem;
     }
 
     .accueil__container {
         row-gap: 2rem;
-
     }
 
     .accueil__img {
         display: block;
-        width: 250px;
+
         justify-self: center;
+
     }
 
     .my__info {
@@ -219,6 +229,7 @@
     .accueil__social-links {
         flex-direction: column;
         row-gap: .25rem;
+        margin-top: 2rem;
     }
 
     .accueil__social-link {
@@ -230,10 +241,6 @@
     .container {
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
-    }
-
-    .accueil__img {
-        width: 200px;
     }
 
     .accueil__title {

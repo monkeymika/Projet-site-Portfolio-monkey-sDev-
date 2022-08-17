@@ -1,12 +1,7 @@
-.contact {
-    margin-bottom: 12rem;
-}
-
 .contact__container {
     grid-template-columns: 300px 340px;
     column-gap: 3rem;
     justify-content: center;
-    align-items: center;
 }
 
 .contact__content {
@@ -54,6 +49,11 @@
     justify-content: center;
     column-gap: .25rem;
     cursor: pointer;
+
+    a {
+        text-decoration: none;
+        color: var(--skin-color);
+    }
 }
 
 .contact__button-icon {
@@ -132,7 +132,8 @@ textarea.input {
     transition: .3s;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--body-color);
+    color: var(--text-color);
+    background-image: linear-gradient(62deg, #595959 0%, #494747 50%, #5d5b5b 100%);
 }
 
 .input__container span::before {

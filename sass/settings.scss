@@ -12,7 +12,7 @@
     /****** COLORS ******/
     --hue-color: 242;
 
-    /*** HSL Color Mode ***/
+    /*** Graphic Chart ***/
     --skin-color: #014034;
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
@@ -73,6 +73,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 button,
 input {
@@ -118,7 +122,6 @@ button {
 /*************************************************************************/
 /***************************** SCROLL BAR *******************************/
 /***********************************************************************/
-
 ::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);

@@ -1,17 +1,24 @@
 @keyframes text-apparition {
     0% {
-        content: "développeur freelance";
+        content: "Développeur freelance";
     }
 
     25% {
-        content: "expert wordpress";
+        content: "Intégrateur wordpress";
     }
 
     50% {
-        content: "site web sur mesure";
+        content: "Site web sur mesure";
     }
 
     75% {
-        content: "réalisateur de projet web";
+        content: "Réalisateur de projets web";
+    }
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+        transform: none;
     }
 }

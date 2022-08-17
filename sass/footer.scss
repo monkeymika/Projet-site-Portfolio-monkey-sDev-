@@ -4,12 +4,23 @@
 }
 
 .footer__container {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.6rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer__bg {
     padding: 3rem 0 3.5rem;
+
+    a {
+        display: flex;
+        justify-content: center;
+        color: white;
+
+        &:hover {
+            color: #02735e;
+            transition: 1s;
+        }
+    }
 }
 
 .footer__title {
@@ -56,7 +67,6 @@
 .footer__social {
     color: var(--title-color);
 }
-
 
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/

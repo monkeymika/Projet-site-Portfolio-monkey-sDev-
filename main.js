@@ -163,7 +163,8 @@ function navHighlighter() {
 
 const navMenu = document.getElementById("sidebar"),
     navToggle = document.getElementById("nav-toggle"),
-    navClose = document.getElementById("nav-close")
+    navClose = document.getElementById("nav-close"),
+    navLink = document.getElementsByClassName("nav__link")
 
 /* SIDEBAR SHOW*/
 if (navToggle) {
@@ -177,3 +178,12 @@ if (navClose) {
         navMenu.classList.remove('show-sidebar')
     })
 }
+
+/* CLOSE SIDEBAR */
+for (let i = 0; i < navLink.length; i++) {
+    navLink[i].addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar')
+    })
+}
+
+

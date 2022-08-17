@@ -1,11 +1,10 @@
 .services__container {
     grid-template-columns: repeat(3, 250px);
+    gap: 2rem;
     justify-content: center;
-    column-gap: 1.8rem;
 }
 
 .services__content {
-    position: relative;
     background-color: var(--box-color);
     padding: 6rem 2rem 2rem 2.5rem;
     border-radius: .25rem;
@@ -15,8 +14,6 @@
     h3 {
         text-align: center;
     }
-
-
 }
 
 .services__icon {
@@ -67,8 +64,6 @@
     opacity: 0;
     visibility: hidden;
 }
-
-
 
 .services__modal-content {
     position: relative;
@@ -131,8 +126,8 @@
 
 .container_div {
     display: flex;
-    gap: 4rem;
     justify-content: center;
+    column-gap: 4rem;
 }
 
 /*************************************************************************/
@@ -144,7 +139,6 @@
         grid-template-columns: repeat(3, 220px);
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .services__container {
@@ -171,12 +165,15 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 536px) {
+    .services__container {
+        grid-template-columns: max-content;
+    }
+}
+
+@media screen and (max-width: 399px) {
     .services__container {
         grid-template-columns: max-content;
     }
 
-    .services__content {
-        padding-right: 3.5rem;
-    }
 }
