@@ -44,7 +44,8 @@
 }
 
 .fa-xmark {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #02735e;
 }
 
 .portfolio__popup-img {
@@ -54,6 +55,12 @@
 .portfolio__popup-subtitle {
     font-size: var(--smaller-font-size);
     margin-bottom: var(--mb-0-25);
+
+    span {
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: #02735e;
+    }
 }
 
 .details__title {
@@ -69,7 +76,6 @@
 
 .details__info li {
     margin-bottom: var(--mb-0-75);
-    text-transform: capitalize;
     font-size: var(--small-font-size);
 }
 
@@ -83,7 +89,7 @@
 
 .details__info li a {
     text-transform: lowercase;
-    color: var(--skin-color);
+    color: #02735e;
 }
 
 /*************************************************************************/

@@ -2,9 +2,22 @@
 <html lang="fr">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYGX0SP46J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VYGX0SP46J');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="sEq_WRX9spJttC2P3Or5In-JzLMsXuIyq4TgQxs6OAM" />
+    <meta name="description"
+        content="MonkeysDev - Développeur web freelance sur nancy. Je réalise et vous accompagne dans la création de votre site internet.">
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/8921e10786.js" crossorigin="anonymous"></script>
     <!-- BOXICONS -->
@@ -12,10 +25,10 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="./assets/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./images/justMonkey.png" />
 
     <title>MonkeysDev - Création de site internet</title>
-    <meta name="description"
-        content="MonkeysDev - Développeur web freelance sur nancy. Je réalise et vous accompagne dans la création de votre site internet.">
 
 </head>
 
@@ -29,13 +42,14 @@
         <nav class="nav">
             <div class="nav__social">
                 <div class="nav__social-links">
-                    <a href="https://www.linkedin.com/in/michael-aubras-6324a61b0/" target="_blank"
-                        class="accueil__social-link">
+                    <a href="https://www.linkedin.com/in/michael-aubras-6324a61b0/" aria-label="link to linkedin"
+                        target="_blank" class="accueil__social-link">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
                 <div class="nav__social-links">
-                    <a href="https://github.com/monkeymika" target="_blank" class="accueil__social-link">
+                    <a href="https://github.com/monkeymika" aria-label="link to github" target="_blank"
+                        class="accueil__social-link">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
@@ -55,6 +69,9 @@
                         </li>
                         <li class="nav__item">
                             <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#testimonials" class="nav__link">Avis</a>
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">Contact</a>
@@ -103,8 +120,9 @@
                 <img src="./images/photoProfilBig.jpg" alt="image de l'auteur du site" class="presentation__img">
 
                 <div class="presentation__data">
-                    <h3 class="presentation__heading"> <span></span></h3>
-                    <p class="presentation__description">Développeur web freelance, je vous propose mes services et mes
+                    <span class="presentation__heading"> <span></span></span>
+                    <p class="presentation__description">Développeur web freelance, je vous propose mes services et
+                        mes
                         compétences dans la création de votre site internet.
                         Je travaille avec tous les types de clients : entreprises, associations, start-ups...
                         N'hésitez pas à me contacter pour vos projets de création d'un site internet.
@@ -113,20 +131,22 @@
                         <div class="presentation__box">
                             <i class="fa-solid fa-award presentation__icon"></i>
                             <h3 class="presentation__title">Formations</h3>
-                            <span class="presentation__subtitle">Diplôme Développeur Web chez Openclassrooms</span>
+                            <span class="presentation__subtitle">Diplôme de Développeur Web chez
+                                Openclassrooms</span>
                         </div>
 
                         <div class="presentation__box">
                             <i class="fa-solid fa-suitcase presentation__icon"></i>
                             <h3 class="presentation__title">Réalisations</h3>
-                            <span class="presentation__subtitle">3 Projets pro <br></span>
+                            <span class="presentation__subtitle">4 Projets pro <br></span>
                             <span class="presentation__subtitle">6 Projets d'études</span>
                         </div>
 
                         <div class="presentation__box">
                             <i class="fa-solid fa-laptop-code presentation__icon"></i>
                             <h3 class="presentation__title">Compétences</h3>
-                            <span class="presentation__subtitle">Html, css, javascript, react, wordpress, MYSQL</span>
+                            <span class="presentation__subtitle">HTML, CSS, SASS, javascript, react, wordpress,
+                                MYSQL</span>
                         </div>
                     </div>
                     <a href="#contact" class="button"><i class="fa-solid fa-play button__icon"></i>
@@ -169,18 +189,23 @@
                 </div> -->
 
                 <div class="work__card mix app">
-                    <img src="./images/booki.png" alt="" class="work__img">
+                    <img src="./images/booki.png" alt="image projet formation" class="work__img">
                     <h3 class="work__title">Booki</h3>
-                    <span class="work__button">Demo
+                    <span class="work__button">En savoir plus
                         <i class="fa-solid fa-arrow-right work__button-icon"></i>
                     </span>
                     <div class="portfolio__item-details">
-                        <h3 class="details__title">Intégration de maquette - Réservation d'hotel</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
+                        <h3 class="details__title">Site de réservation d'hotel et d'activités</h3>
+                        <p class="details__description">Intégration d'une maquette dans le cadre de ma formation (les
+                            liens ne sont donc pas fonctionnels).
+                            <br>
+                            Le site permet aux usagers de trouver des hébergements et des activités dans la ville de
+                            leur choix. Les hébergements peuvent être filtrés par thématique, par exemple leur budget ou
+                            leur ambiance.
+                        </p>
                         <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>HTML/CSS</span></li>
+                            <li>Projet terminé le : <span>15 octobre 2021</span></li>
+                            <li>Technologies : <span>HTML/CSS</span></li>
                             <li>Voir - <span><a href="https://monkeymika.github.io/P2_Booki/"
                                         target="_blank">www.booki.com</a></span>
                             </li>
@@ -208,18 +233,20 @@
                 </div> -->
 
                 <div class="work__card mix app">
-                    <img src="./images/ohmyfood.png" alt="" class="work__img">
+                    <img src="./images/ohmyfood.png" alt="image projet formation" class="work__img">
                     <h3 class="work__title">OhmyFood</h3>
-                    <span class="work__button">Demo
+                    <span class="work__button">En savoir plus
                         <i class="fa-solid fa-arrow-right work__button-icon"></i>
                     </span>
                     <div class="portfolio__item-details">
                         <h3 class="details__title">Application mobile reservation de restaurant</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
+                        <p class="details__description">L'objectif de ce projet de formation était de développer un site
+                            100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes
+                            classiques de réservation, les clients pourront composer le menu de leur repas pour que les
+                            plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !</p>
                         <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>HTML/CSS/SASS</span></li>
+                            <li>Projet terminé le : <span>5 novembre 2020</span></li>
+                            <li>Technologies : <span>HTML/CSS/SASS</span></li>
                             <li>Voir - <span><a href="https://monkeymika.github.io/MichaelAubras_3_08112021/index.html"
                                         target="_blank">
                                         www.ohmyfood.com</a></span>
@@ -248,9 +275,9 @@
                 </div> -->
 
                 <div class="work__card mix web">
-                    <img src="./images/cryptoresto.jpeg" alt="" class="work__img">
+                    <img src="./images/miniatureCryptoResto.png" alt="image site internet créé" class="work__img">
                     <h3 class="work__title">CryptoResto</h3>
-                    <span class="work__button">Voir
+                    <span class="work__button">En savoir plus
                         <i class="fa-solid fa-arrow-right work__button-icon"></i>
                     </span>
                     <div class="portfolio__item-details">
@@ -258,10 +285,76 @@
                         <p class="details__description">CryptoResto est une application permettant de localiser les
                             restaurants proche de chez vous acceptant la cryptomonnaie</p>
                         <ul class="details__info">
-                            <li>Projet terminé le - <span>6 juin 2022</span></li>
-                            <li>Technologies - <span>Wordpress</span></li>
+                            <li>Projet terminé le : <span>6 juin 2022</span></li>
+                            <li>Technologies : <span>Wordpress</span></li>
                             <li>Voir - <span><a href="https://cryptoresto.net/" target="_blank">
                                         www.cryptoresto.net</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work__card mix web">
+                    <img src="./images/miniatureJesonrichpeinturedecoration.png" alt="image site internet créé"
+                        class="work__img">
+                    <h3 class="work__title">jesonrichpeinturedecoration</h3>
+                    <span class="work__button">En savoir plus
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Site vitrine pour un peintre et décorateur</h3>
+                        <p class="details__description">jesonrichpeinturedecoration.com est un site vitrine créé pour
+                            présenter l'activité de monsieur Rich Jeson, peintre et décorateur dans le secteur de Nancy.
+                        </p>
+                        <ul class="details__info">
+                            <li>Projet terminé le : <span>15 septembre 2022</span></li>
+                            <li>Technologies : <span>Wordpress</span></li>
+                            <li>Voir - <span><a href="https://jesonrichpeinturedecoration.com/" target="_blank">
+                                        www.jesonrichpeinturedecoration.com</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work__card mix web">
+                    <img src="./images/miniatureLegacy.png" alt="image site internet créé" class="work__img">
+                    <h3 class="work__title">Legacy</h3>
+                    <span class="work__button">En savoir plus
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Site vitrine Legacy</h3>
+                        <p class="details__description">Legacy est un site mettant à disposition des communes, musées,
+                            monuments ou lieux touristiques, des QR codes dont le but est d'améliorer l'expérience des
+                            visiteurs.
+                        </p>
+                        <ul class="details__info">
+                            <li>Projet terminé le : <span>12 janvier 2023</span></li>
+                            <li>Technologies : <span>WebFlow</span></li>
+                            <li>Voir - <span><a href="https://legacy-webflow.whalex.fr/" target="_blank">
+                                        www.legacy-webflow.whalex.fr</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work__card mix web">
+                    <img src="./images/screenToshokan.png" alt="image site internet créé" class="work__img">
+                    <h3 class="work__title">Toshokan</h3>
+                    <span class="work__button">En savoir plus
+                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
+                    </span>
+                    <div class="portfolio__item-details">
+                        <h3 class="details__title">Site vitrine Toshokan</h3>
+                        <p class="details__description">Toshokan est une plateforme dédiée aux fans de mangas,
+                            permettant de trouver facilement des informations sur les différents mangas existants, ainsi
+                            que de découvrir de nouvelles oeuvres. Elle offre également la possibilité de tester ses
+                            connaissances à travers des quizz, de partager ses propres quizz avec la communauté et de
+                            grimper dans le classement grâce à un système de réputation. Les utilisateurs peuvent
+                            également rejoindre ou créer des familles basées sur leurs centres d'intérêts, développer
+                            leur propre communauté et dominer le classement en fonction de leur réputation. Toshokan
+                            permet également aux utilisateurs de laisser leur avis sur la plateforme et d'interagir avec
+                            la communauté à travers les réseaux sociaux.
+                        </p>
+                        <ul class="details__info">
+                            <li>Projet terminé le : <span>06 avril 2023</span></li>
+                            <li>Technologies : <span>HTML/CSS/JAVASCRIPT</span></li>
+                            <li>Voir - <span><a href="https://toshokan-12c9e.web.app/" target="_blank">
+                                        www.toshokan.com</a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -296,7 +389,7 @@
                         <img src="" alt="" class="portfolio__popup-img"></img>
                     </div>
                     <div class="portfolio__popup-info">
-                        <div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+                        <div class="portfolio__popup-subtitle"><span>Design</span></div>
                         <div class="portfolio__popup-body">
                             <h3 class="details__title">App for technologie & services</h3>
                             <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -555,7 +648,7 @@
         </section>
 
         <!-- ******* Temoignages ********** -->
-        <!-- <section class="testimonials section">
+        <section class="testimonials section" id="testimonials">
             <h2 data-heading="Parole de client" class="section__title">Témoignages</h2>
 
             <div class="testimonials__container container swiper">
@@ -564,48 +657,56 @@
                         <div class="testimonial__quote">
                             <i class='bx bxs-quote-alt-left'></i>
                         </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Enim corporis incidunt debitis.</p>
-                        <h3 class="testimonial__date">02/06/2022</h3>
-                        <img src="./images/client2.jpg" alt="" class="testimonial__profile-img">
+                        <p class="testimonial__description">Très satisfait de la création de mon site internet. Très à l
+                            ecoute et toujours disponible et un bon suivi au quotidien je recommande fortement.
+                        </p>
+                        <h3 class="testimonial__date">12/01/2023</h3>
+                        <img src="./images/logoJeson.png" alt="Logo de Jeson Rich, peintre et décorateur"
+                            class="testimonial__profile-img">
 
                         <div class="testimonial__profile-data">
-                            <span class="testimonial__profile-name">Levi Ackerman</span>
-                            <span class="testimonial__profile-detail">Createur CryptoResto</span>
+                            <span class="testimonial__profile-name">Jeson Rich</span>
+                            <span class="testimonial__profile-detail">Peintre et décorateur</span>
                         </div>
                     </div>
                     <div class="testimonial__card swiper-slide">
                         <div class="testimonial__quote">
                             <i class='bx bxs-quote-alt-left'></i>
                         </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Enim corporis incidunt debitis.</p>
-                        <h3 class="testimonial__date">15/07/2022</h3>
-                        <img src="./images/client3.jpg" alt="" class="testimonial__profile-img">
+                        <p class="testimonial__description">Michael est un professionnel à l'écoute, disponible et
+                            efficace.
+                            Il sait sortir des sentiers battus lorsque les circonstances l'exigent et trouver des
+                            solutions adaptées à la demande.
+                            Je le recommande donc à 100% !</p>
+                        <h3 class="testimonial__date">01/03/2023</h3>
+                        <img src="./images/pierreAllory.png" alt="Photo de Pierre Allory, Naturopathe et coach sportif"
+                            class="testimonial__profile-img">
 
                         <div class="testimonial__profile-data">
-                            <span class="testimonial__profile-name">Derya Uckar</span>
-                            <span class="testimonial__profile-detail">ClemaConseil</span>
+                            <span class="testimonial__profile-name">Pierre Allory</span>
+                            <span class="testimonial__profile-detail">Coach sportif</span>
                         </div>
                     </div>
                     <div class="testimonial__card swiper-slide">
                         <div class="testimonial__quote">
                             <i class='bx bxs-quote-alt-left'></i>
                         </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Enim corporis incidunt debitis.</p>
-                        <h3 class="testimonial__date">15/07/2022</h3>
-                        <img src="./images/client1.jpg" alt="" class="testimonial__profile-img">
+                        <p class="testimonial__description">Très satisfait de la prestation réalisée par Mika ! Très
+                            professionnel et réactif il a fait le maximum pour solutionner toutes mes attentes et
+                            problèmes, je recommande !</p>
+                        <h3 class="testimonial__date">13/04/2024</h3>
+                        <img src="./images/screenToshokan.png" alt="Logo de Toshokan, une idée de Charles Simonet"
+                            class="testimonial__profile-img">
 
                         <div class="testimonial__profile-data">
-                            <span class="testimonial__profile-name">Derya Uckar</span>
-                            <span class="testimonial__profile-detail">ClemaConseil</span>
+                            <span class="testimonial__profile-name">Charles Simonet</span>
+                            <span class="testimonial__profile-detail">Toshokan</span>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </section> -->
+        </section>
 
         <!-- ******* Contact ********** -->
         <section class="contact section" id="contact">
@@ -619,7 +720,7 @@
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">monkeysdev.contact@gmail.com</span>
                             <span class="contact__button">
-                                <a href="mailto:monkeysdev.contact@gmail.fr">Ecrivez-moi</a>
+                                <a href="mailto:monkeysdev.contact@gmail.com">Ecrivez-moi</a>
                                 <i class="fa-solid fa-arrow-right contact__button-icon"></i>
                             </span>
                         </div>
@@ -636,36 +737,6 @@
                     </div>
                 </div>
 
-                <div class="contact__content">
-                    <form action="https://formsubmit.co/michael.aubras@gmail.com" method="POST" class="contact__form">
-                        <input type="hidden" name="_subject" value="New email!">
-                        <div class="input__container">
-                            <input type="text" name="user_name" required class="input">
-                            <label for="name">Nom</label>
-                            <span>Nom</span>
-                        </div>
-                        <div class="input__container">
-                            <input type="email" name="user_email" required class="input">
-                            <label for="email">Email</label>
-                            <span>Email</span>
-                        </div>
-                        <div class="input__container">
-                            <input type="text" name="user_tel" required class="input">
-                            <label for="tel">Téléphone</label>
-                            <span>Téléphone</span>
-                        </div>
-                        <div class="input__container textarea">
-                            <textarea name="user_message" id="" required class="input"></textarea>
-                            <label for="message">Message</label>
-                            <span>Message</span>
-                        </div>
-                        <input type="hidden" name="_next" value="https://monkeysdev.fr/thankyou.html">
-                        <button type="submit" name="valider" class="button"><i
-                                class="fa-solid fa-play button__icon"></i>
-                            Envoyer
-                        </button>
-                    </form>
-                </div>
             </div>
         </section>
 

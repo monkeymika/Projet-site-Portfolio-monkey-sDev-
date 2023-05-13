@@ -50,11 +50,12 @@
 }
 
 // Animation du titre de présentation
-h3 {
+.presentation__heading {
 
     span {
         color: #0aa67a;
         font-size: 2rem;
+        font-weight: 900;
     }
 
     span::before {
@@ -137,6 +138,6 @@ h3 {
 @media screen and (max-width: 418px) {
     .presentation__info {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: .5rem;
+        row-gap: 1.5rem;
     }
 }
