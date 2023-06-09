@@ -9,16 +9,18 @@
     padding: 6rem 2rem 2rem 2.5rem;
     border-radius: .25rem;
     box-shadow: black 8px 10px 8px 4px;
+    cursor: pointer;
 
     i,
     h3 {
         text-align: center;
     }
+
 }
 
 .services__icon {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--skin-color);
     margin-bottom: var(--mb-1);
 }
@@ -44,8 +46,18 @@
     transition: .3s;
 }
 
-.services__button:hover .services__button-icon {
+.services__content:hover .services__button-icon {
     transform: translateX(.30rem);
+}
+
+.services__content:hover .services__title {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.services__content:hover .services__icon {
+    transform: scale(1.2);
+    transition: 0.5s ease;
 }
 
 .services__modal {
@@ -130,6 +142,8 @@
     column-gap: 4rem;
 }
 
+
+
 /*************************************************************************/
 /***************************** RESPONSIVE *******************************/
 /***********************************************************************/
@@ -173,7 +187,7 @@
 
 @media screen and (max-width: 399px) {
     .services__container {
-        grid-template-columns: max-content;
+        grid-template-columns: repeat(1, 220px)
     }
 
 }

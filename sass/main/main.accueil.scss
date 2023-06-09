@@ -58,7 +58,6 @@
     padding: 35px;
 
     img {
-        position: fixed;
         opacity: 0;
         transform: translateY(-30px);
         animation: show 0.8s 0.2s ease-out forwards;
@@ -173,7 +172,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1034px) {
     .container {
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);

@@ -41,73 +41,65 @@ function activeWork() {
 
 linkWork.forEach(i => i.addEventListener("click", activeWork))
 
-/************************* Work Popup ***************************/
+/************************* STEPS ***************************/
+const stepsContentList = document.querySelectorAll('.steps__content');
+const stepsDescriptionList = document.querySelectorAll('.steps__description');
 
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains("work__button")) {
-        togglePortfolioPopup();
-        portfolioItemDetails(e.target.parentElement);
-    }
-})
-
-togglePortfolioPopup = () => {
-    document.querySelector(".portfolio__popup").classList.toggle("open")
+// Fonction de rappel pour fermer "steps__description"
+const closeStepsDescription = () => {
+    stepsContentList.forEach((stepsContent) => {
+        stepsContent.classList.remove('active');
+        stepsContent.querySelector('.steps__button').style.display = 'block';
+    });
+    stepsDescriptionList.forEach((stepsDescription) => {
+        stepsDescription.classList.remove('active');
+    });
 };
 
-document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
 
-portfolioItemDetails = (portfolioItem) => {
-    document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector(".work__img").src;
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML =
-        portfolioItem.querySelector(".work__title").innerHTML;
-    document.querySelector(".portfolio__popup-body").innerHTML =
-        portfolioItem.querySelector(".portfolio__item-details").innerHTML;
-}
+// Écouteurs d'événements sur chaque "steps__content" pour les ouvrir/fermer individuellement
+stepsContentList.forEach((stepsContent, index) => {
+    const buttonElement = stepsContent.querySelector('.steps__button');
+    const numberElement = stepsContent.querySelector('.number');
+
+    stepsContent.addEventListener('click', () => {
+        stepsContent.classList.toggle('active');
+        stepsDescriptionList[index].classList.toggle('active');
+        numberElement.classList.toggle('number-active');
+
+        if (stepsContent.classList.contains('active')) {
+            buttonElement.style.display = 'none';
+        } else {
+            buttonElement.style.display = 'block';
+        }
+    });
+});
+
 
 /************************* SERVICES MODAL ***************************/
 const modalViews = document.querySelectorAll('.services__modal'),
-    modelBtns = document.querySelectorAll('.services__button'),
+    servicesContents = document.querySelectorAll('.services__content'),
     modalCloses = document.querySelectorAll('.services__modal-close')
 
 let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
 
-modelBtns.forEach((modelBtn, i) => {
-    modelBtn.addEventListener('click', () => {
-        modal(i)
-    })
-})
+servicesContents.forEach((servicesContent, i) => {
+    servicesContent.addEventListener('click', () => {
+        modal(i);
+        servicesContent.classList.add('modal-open');
+    });
+});
 
 modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener("click", () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
-
-/************************* SWIPER TESTIMONIAL ***************************/
-
-let swiper = new Swiper(".testimonials__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-    },
-
+    modalClose.addEventListener("click", (event) => {
+        event.stopPropagation(); // Empêche la propagation de l'événement de clic à la fenêtre modale
+        const modal = modalClose.closest('.services__modal');
+        modal.classList.remove('active-modal');
+    });
 });
+
 
 /************************* INPUT ANIMATION ***************************/
 
@@ -185,5 +177,25 @@ for (let i = 0; i < navLink.length; i++) {
         navMenu.classList.remove('show-sidebar')
     })
 }
+
+/************************* ANIMATION SCROLL ***************************/
+
+window.addEventListener('scroll', function () {
+    const elements = document.querySelectorAll('.slide-up');
+
+    elements.forEach(function (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementPosition < windowHeight - windowHeight / 4) {
+            element.classList.add('slide-up-visible');
+        } else {
+            element.classList.remove('slide-up-visible');
+        }
+    });
+});
+
+
+
 
 

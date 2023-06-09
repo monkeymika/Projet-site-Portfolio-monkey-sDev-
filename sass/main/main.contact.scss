@@ -1,6 +1,6 @@
 .contact__container {
-
     justify-content: center;
+    padding-bottom: 5rem;
 }
 
 .contact__content {
@@ -9,7 +9,8 @@
 
 .contact__info {
     display: grid;
-    row-gap: 1.5rem;
+    grid-template-columns: repeat(2, 350px);
+    gap: 2rem;
 }
 
 .contact__card {
@@ -18,6 +19,12 @@
     border-radius: .5rem;
     text-align: center;
     box-shadow: black 8px 10px 8px 4px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+        transition: 0.3s ease;
+    }
 }
 
 .contact__card-icon {
@@ -38,6 +45,7 @@
 .contact__card-data {
     display: block;
     margin-bottom: var(--mb-0-75);
+    color: white;
 }
 
 .contact__button {
@@ -60,7 +68,7 @@
     transition: .3s;
 }
 
-.contact__button:hover .contact__button-icon {
+.contact__card:hover .contact__button-icon {
     transform: translateX(.30rem);
 }
 
@@ -160,21 +168,27 @@ textarea.input {
 /***************************** RESPONSIVE *******************************/
 /***********************************************************************/
 
-@media screen and (max-width: 768px) {
-    .contact__container {
-        grid-template-columns: 360px;
-        row-gap: 3rem;
+@media screen and (max-width: 780px) {
+    
+    .contact__info {
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 2rem;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .contact__container {
-        grid-template-columns: 300px;
+    .contact__info {
+        grid-template-columns: repeat(1, 300px);
     }
 }
 
 @media screen and (max-width: 350px) {
-    .contact__container {
-        grid-template-columns: 1fr;
+    .contact__info {
+        grid-template-columns: repeat(1, 200px);
+    }
+
+    .contact__card-data {
+        font-size: 10px;
     }
 }

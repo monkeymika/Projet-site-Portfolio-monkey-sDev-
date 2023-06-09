@@ -1,11 +1,11 @@
 .presentation__container {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
+    column-gap: 2rem;
     align-items: center;
 }
 
 .presentation__img {
-    width: 365px;
+    width: 280px;
     border-radius: 0.90rem;
     justify-self: center;
 }
@@ -47,6 +47,29 @@
 
 .presentation__subtitle {
     font-size: var(--smaller-font-size);
+}
+
+.container__testimonial__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: show 0.8s 1s ease-out forwards;
+
+    a {
+        color: white;
+    }
+}
+
+.google__testimonials:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);  
+}
+
+.container__testimonial__contact .google__testimonials a:hover {
+    color: #0ab394;
 }
 
 // Animation du titre de présentation
@@ -100,6 +123,20 @@
     .presentation__description {
         padding: 0 4rem;
         text-align: center;
+    }
+
+    .container__testimonial__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: show 0.8s 1s ease-out forwards;
+    
+        a {
+            color: white;
+        }
     }
 }
 

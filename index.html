@@ -71,7 +71,7 @@
                             <a href="#services" class="nav__link">Services</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#testimonials" class="nav__link">Avis</a>
+                            <a href="#steps" class="nav__link">Étapes</a>
                         </li>
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">Contact</a>
@@ -117,9 +117,11 @@
             <h2 data-heading="Intro" class="section__title">À propos</h2>
 
             <div class="presentation__container container grid">
-                <img src="./images/photoProfilBig.jpg" alt="image de l'auteur du site" class="presentation__img">
 
-                <div class="presentation__data">
+                <img src="./images/photoProfilBig.jpg" alt="image de l'auteur du site"
+                    class="presentation__img slide-up normal">
+
+                <div class="presentation__data slide-up short">
                     <span class="presentation__heading"> <span></span></span>
                     <p class="presentation__description">Développeur web freelance, je vous propose mes services et
                         mes
@@ -127,7 +129,7 @@
                         Je travaille avec tous les types de clients : entreprises, associations, start-ups...
                         N'hésitez pas à me contacter pour vos projets de création d'un site internet.
                     </p>
-                    <div class="presentation__info grid">
+                    <!-- <div class="presentation__info grid">
                         <div class="presentation__box">
                             <i class="fa-solid fa-award presentation__icon"></i>
                             <h3 class="presentation__title">Formations</h3>
@@ -148,256 +150,84 @@
                             <span class="presentation__subtitle">HTML, CSS, SASS, javascript, react, wordpress,
                                 MYSQL</span>
                         </div>
+                    </div> -->
+                    <div class="container__testimonial__contact">
+                        <div class="google__testimonials">
+                            <a href="https://goo.gl/maps/CDedK7eNQaDZVygy7" target="_blank">
+                                <i class="fa-solid fa-star" style="color: #0ab394;"></i>
+                                <i class="fa-solid fa-star" style="color: #0ab394;"></i>
+                                <i class="fa-solid fa-star" style="color: #0ab394;"></i>
+                                <i class="fa-solid fa-star" style="color: #0ab394;"></i>
+                                <i class="fa-solid fa-star" style="color: #0ab394;"></i>
+                                4 Avis google
+                            </a>
+                        </div>
+                        <a href="#contact" class="button"><i class="fa-solid fa-play button__icon"></i>
+                            Contactez moi
+                        </a>
                     </div>
-                    <a href="#contact" class="button"><i class="fa-solid fa-play button__icon"></i>
-                        Contactez moi
-                    </a>
                 </div>
             </div>
         </section>
 
         <!-- ******* Realisation ********** -->
 
-        <section class="work section" id="work">
+        <section class="work section fade-in" id="work">
             <h2 data-heading="Mon Portfolio" class="section__title">Mes réalisations</h2>
 
-            <div class="work__filters">
+            <!-- <div class="work__filters">
                 <span class="work__item active-work" data-filter="all">Voir tout</span>
                 <span class="work__item" data-filter=".web">Site Web</span>
                 <span class="work__item" data-filter=".app">Projet de formation</span>
-            </div>
+            </div> -->
 
-            <div class="work__container container grid">
+            <div class="work__container container grid slide-up normal">
 
-                <!-- <div class="work__card mix web">
-                    <img src="./images/work-1.webp" alt="" class="work__img">
-                    <h3 class="work__title">ClemaConseil</h3>
-                    <span class="work__button">Demo
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">The service provide for design</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
-                        <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>html css</span></li>
-                            <li>Role - <span>frontend</span></li>
-                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
-                        </ul>
-                    </div>
-                </div> -->
-
-                <div class="work__card mix app">
-                    <img src="./images/booki.png" alt="image projet formation" class="work__img">
-                    <h3 class="work__title">Booki</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site de réservation d'hotel et d'activités</h3>
-                        <p class="details__description">Intégration d'une maquette dans le cadre de ma formation (les
-                            liens ne sont donc pas fonctionnels).
-                            <br>
-                            Le site permet aux usagers de trouver des hébergements et des activités dans la ville de
-                            leur choix. Les hébergements peuvent être filtrés par thématique, par exemple leur budget ou
-                            leur ambiance.
-                        </p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>15 octobre 2021</span></li>
-                            <li>Technologies : <span>HTML/CSS</span></li>
-                            <li>Voir - <span><a href="https://monkeymika.github.io/P2_Booki/"
-                                        target="_blank">www.booki.com</a></span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="work__card">
+                    <a href="https://tokdem.com/" target="_blank">
+                        <div class="work__img">
+                            <img src="./images/screenTokdem.png" alt="image site internet créé">
+                        </div>
+                        <div class="work__title">
+                            <h3>Tokdem</h3>
+                        </div>
+                    </a>
                 </div>
 
-                <!-- <div class="work__card mix design">
-                    <img src="./images/work-3.webp" alt="" class="work__img">
-                    <h3 class="work__title">Brand Design</h3>
-                    <span class="work__button">Demo
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Logo design creativity & application</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
-                        <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>html css</span></li>
-                            <li>Role - <span>frontend</span></li>
-                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
-                        </ul>
-                    </div>
-                </div> -->
 
-                <div class="work__card mix app">
-                    <img src="./images/ohMyFood.png" alt="image projet formation" class="work__img">
-                    <h3 class="work__title">OhmyFood</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Application mobile reservation de restaurant</h3>
-                        <p class="details__description">L'objectif de ce projet de formation était de développer un site
-                            100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes
-                            classiques de réservation, les clients pourront composer le menu de leur repas pour que les
-                            plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !</p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>5 novembre 2020</span></li>
-                            <li>Technologies : <span>HTML/CSS/SASS</span></li>
-                            <li>Voir - <span><a href="https://monkeymika.github.io/MichaelAubras_3_08112021/index.html"
-                                        target="_blank">
-                                        www.ohmyfood.com</a></span>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="work__card">
+                    <a href="https://toshokan-12c9e.web.app/" target="_blank">
+                        <div class="work__img">
+                            <img src="./images/screenToshokan.png" alt="image site internet créé">
+                        </div>
+                        <div class="work__title">
+                            <h3>Toshokan</h3>
+                        </div>
+                    </a>
                 </div>
 
-                <!-- <div class="work__card mix app">
-                    <img src="./images/work-4.webp" alt="" class="work__img">
-                    <h3 class="work__title">Kanap</h3>
-                    <span class="work__button">Demo
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Application mobile reservation de restaurant</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
-                        <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>html css</span></li>
-                            <li>Role - <span>frontend</span></li>
-                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
-                        </ul>
-                    </div>
-                </div> -->
-
-                <!-- <div class="work__card mix web">
-                    <img src="./images/miniatureCryptoResto.png" alt="image site internet créé" class="work__img">
-                    <h3 class="work__title">CryptoResto</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site de présentation de l'application CryptoResto</h3>
-                        <p class="details__description">CryptoResto est une application permettant de localiser les
-                            restaurants proche de chez vous acceptant la cryptomonnaie</p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>6 juin 2022</span></li>
-                            <li>Technologies : <span>Wordpress</span></li>
-                            <li>Voir - <span><a href="https://cryptoresto.net/" target="_blank">
-                                        www.cryptoresto.net</a></span></li>
-                        </ul>
-                    </div>
-                </div> -->
-                <div class="work__card mix web">
-                    <img src="./images/miniatureJesonrichpeinturedecoration.png" alt="image site internet créé"
-                        class="work__img">
-                    <h3 class="work__title">jesonrichpeinturedecoration</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site vitrine pour un peintre et décorateur</h3>
-                        <p class="details__description">jesonrichpeinturedecoration.com est un site vitrine créé pour
-                            présenter l'activité de monsieur Rich Jeson, peintre et décorateur dans le secteur de Nancy.
-                        </p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>15 septembre 2022</span></li>
-                            <li>Technologies : <span>Wordpress</span></li>
-                            <li>Voir - <span><a href="https://jesonrichpeinturedecoration.com/" target="_blank">
-                                        www.jesonrichpeinturedecoration.com</a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work__card mix web">
-                    <img src="./images/miniatureLegacy.png" alt="image site internet créé" class="work__img">
-                    <h3 class="work__title">Legacy</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site vitrine Legacy</h3>
-                        <p class="details__description">Legacy est un site mettant à disposition des communes, musées,
-                            monuments ou lieux touristiques, des QR codes dont le but est d'améliorer l'expérience des
-                            visiteurs.
-                        </p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>12 janvier 2023</span></li>
-                            <li>Technologies : <span>WebFlow</span></li>
-                            <li>Voir - <span><a href="https://legacy-webflow.whalex.fr/" target="_blank">
-                                        www.legacy-webflow.whalex.fr</a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work__card mix web">
-                    <img src="./images/screenToshokan.png" alt="image site internet créé" class="work__img">
-                    <h3 class="work__title">Toshokan</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site vitrine Toshokan</h3>
-                        <p class="details__description">Toshokan est une plateforme dédiée aux fans de mangas,
-                            permettant de trouver facilement des informations sur les différents mangas existants, ainsi
-                            que de découvrir de nouvelles oeuvres. Elle offre également la possibilité de tester ses
-                            connaissances à travers des quizz, de partager ses propres quizz avec la communauté et de
-                            grimper dans le classement grâce à un système de réputation. Les utilisateurs peuvent
-                            également rejoindre ou créer des familles basées sur leurs centres d'intérêts, développer
-                            leur propre communauté et dominer le classement en fonction de leur réputation. Toshokan
-                            permet également aux utilisateurs de laisser leur avis sur la plateforme et d'interagir avec
-                            la communauté à travers les réseaux sociaux.
-                        </p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>06 avril 2023</span></li>
-                            <li>Technologies : <span>HTML/CSS/JAVASCRIPT</span></li>
-                            <li>Voir - <span><a href="https://toshokan-12c9e.web.app/" target="_blank">
-                                        www.toshokan.com</a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work__card mix web">
-                    <img src="./images/SplashScreen_TOKDEM (1).png" alt="image site internet créé" class="work__img">
-                    <h3 class="work__title">Tokdem</h3>
-                    <span class="work__button">En savoir plus
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">Site vitrine Tokdem</h3>
-                        <p class="details__description">Tokdem est une application qui accompagne les entreprises dans
-                            leurs enjeux de communication interne, d'organisation et d'innovation RH. Le site vitrine à
-                            pour objectif de présenter l'application qui est téléchargeable sur l'app store et google
-                            store.
-                        </p>
-                        <ul class="details__info">
-                            <li>Projet terminé le : <span>11 mai 2023</span></li>
-                            <li>Technologies : <span>Wordpress/Divi</span></li>
-                            <li>Voir - <span><a href="https://tokdem.com/" target="_blank">
-                                        www/tokdem.com</a></span></li>
-                        </ul>
-                    </div>
+                <div class="work__card">
+                    <a href="https://jesonrichpeinturedecoration.com/" target="_blank">
+                        <div class="work__img">
+                            <img src="./images/screenPeinture.png" alt="image site internet créé">
+                        </div>
+                        <div class="work__title">
+                            <h3>jesonrichpeinturedecoration</h3>
+                        </div>
+                    </a>
                 </div>
 
-                <!-- <div class="work__card mix design">
-                    <img src="./images/work-6.webp" alt="" class="work__img">
-                    <h3 class="work__title">Web Design</h3>
-                    <span class="work__button">Demo
-                        <i class="fa-solid fa-arrow-right work__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title">App for technologie & services</h3>
-                        <p class="details__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Numquam esse possimus minima.</p>
-                        <ul class="details__info">
-                            <li>Created - <span>4 dec 2020</span></li>
-                            <li>Technologies - <span>html css</span></li>
-                            <li>Role - <span>frontend</span></li>
-                            <li>Voir - <span><a href="#">www.domain.com</a></span></li>
-                        </ul>
-                    </div>
-                </div> -->
+                <div class="work__card">
+                    <a href="https://legacy-webflow.whalex.fr/" target="_blank">
+                        <div class="work__img">
+                            <img src="./images/screenLegacy.png" alt="image site internet créé">
+                        </div>
+                        <div class="work__title">
+                            <h3>Legacy</h3>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -430,7 +260,7 @@
         <section class="services section" id="services">
             <h2 data-heading="Des prestations adaptées à vos besoins" class="section__title">Mes services</h2>
 
-            <div class="services__container container grid">
+            <div class="services__container container grid slide-up normal">
                 <div class="services__content">
                     <div>
                         <i class="fa-solid fa-pen-to-square services__icon"></i>
@@ -468,8 +298,8 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="services__content">
                     <div>
                         <i class="fa-solid fa-code services__icon"></i>
@@ -557,7 +387,7 @@
                 <div class="services__content">
                     <div>
                         <i class="fa-solid fa-chart-line services__icon"></i>
-                        <h3 class="services__title">SEO/Référencement naturel</h3>
+                        <h3 class="services__title">Référencement naturel</h3>
                     </div>
 
                     <span class="services__button">
@@ -668,12 +498,73 @@
             </div>
         </section>
 
-        <!-- ******* Temoignages ********** -->
-        <section class="testimonials section" id="testimonials">
-            <h2 data-heading="Parole de client" class="section__title">Témoignages</h2>
+        <!-- ******* Etapes ********** -->
+        <section class="steps section" id="steps">
+            <h2 data-heading="Processus complet de notre collaboration" class="section__title">
+                Étapes
+            </h2>
 
-            <div class="testimonials__container container swiper">
-                <div class="swiper-wrapper">
+            <div class="steps__container container grid slide-up normal">
+                <div class="steps__content">
+
+                    <span class="number">01</span>
+                    <h3 class="steps__title">Échange sur vos envies</h3>
+                    <p class="steps__description">Notre approche personnalisée comprend un partenariat étroit. Nous
+                        collaborons pour créer
+                        ensemble votre site web, en vous accompagnant dans l'achat du nom de domaine et de
+                        l'hébergement.
+                    </p>
+                    <span class="steps__button">
+                        Voir plus <i class="fa-solid fa-arrow-right steps__button-icon"></i>
+                    </span>
+
+                </div>
+                <div class="steps__content">
+
+                    <span class="number">02</span>
+                    <h3 class="steps__title">Échange sur vos envies</h3>
+                    <p class="steps__description">Notre approche personnalisée comprend un partenariat étroit. Nous
+                        collaborons pour créer
+                        ensemble votre site web, en vous accompagnant dans l'achat du nom de domaine et de
+                        l'hébergement.
+                    </p>
+                    <span class="steps__button">
+                        Voir plus <i class="fa-solid fa-arrow-right steps__button-icon"></i>
+                    </span>
+
+                </div>
+                <div class="steps__content">
+
+                    <span class="number">03</span>
+                    <h3 class="steps__title">Échange sur vos envies</h3>
+                    <p class="steps__description">Notre approche personnalisée comprend un partenariat étroit. Nous
+                        collaborons pour créer
+                        ensemble votre site web, en vous accompagnant dans l'achat du nom de domaine et de
+                        l'hébergement.
+                    </p>
+                    <span class="steps__button">
+                        Voir plus <i class="fa-solid fa-arrow-right steps__button-icon"></i>
+                    </span>
+
+                </div>
+                <div class="steps__content">
+
+                    <span class="number">04</span>
+                    <h3 class="steps__title">Échange sur vos envies</h3>
+                    <p class="steps__description">Notre approche personnalisée comprend un partenariat étroit. Nous
+                        collaborons pour créer
+                        ensemble votre site web, en vous accompagnant dans l'achat du nom de domaine et de
+                        l'hébergement.
+                    </p>
+                    <span class="steps__button">
+                        Voir plus <i class="fa-solid fa-arrow-right steps__button-icon"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="swiper-wrapper">
                     <div class="testimonial__card swiper-slide">
                         <div class="testimonial__quote">
                             <i class='bx bxs-quote-alt-left'></i>
@@ -726,7 +617,7 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
-            </div>
+            </div> -->
         </section>
 
         <!-- ******* Contact ********** -->
@@ -736,25 +627,29 @@
             <div class="contact__container container grid">
                 <div class="contact__content">
                     <div class="contact__info">
-                        <div class="contact__card">
-                            <i class="fa-regular fa-envelope contact__card-icon"></i>
-                            <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">monkeysdev.contact@gmail.com</span>
-                            <span class="contact__button">
-                                <a href="mailto:monkeysdev.contact@gmail.com">Ecrivez-moi</a>
-                                <i class="fa-solid fa-arrow-right contact__button-icon"></i>
-                            </span>
-                        </div>
+                        <a href="mailto:monkeysdev.contact@gmail.com" target="_blank">
+                            <div class="contact__card slide-up normal">
+                                <i class="fa-regular fa-envelope contact__card-icon"></i>
+                                <h3 class="contact__card-title">Email</h3>
+                                <span class="contact__card-data">monkeysdev.contact@gmail.com</span>
+                                <span class="contact__button">
+                                    Ecrivez-moi
+                                    <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+                                </span>
+                            </div>
+                        </a>
 
-                        <div class="contact__card">
-                            <i class="fa-brands fa-whatsapp contact__card-icon"></i>
-                            <h3 class="contact__card-title">Whatsapp</h3>
-                            <span class="contact__card-data">0744529073</span>
-                            <span class="contact__button">
-                                <a href="https://api.whatsapp.com/send?phone=0744529073">Contactez-moi</a>
-                                <i class="fa-solid fa-arrow-right contact__button-icon"></i>
-                            </span>
-                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=0744529073" target="_blank">
+                            <div class="contact__card slide-up short">
+                                <i class="fa-brands fa-whatsapp contact__card-icon"></i>
+                                <h3 class="contact__card-title">Whatsapp</h3>
+                                <span class="contact__card-data">0744529073</span>
+                                <span class="contact__button">
+                                    Contactez-moi
+                                    <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
