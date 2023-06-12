@@ -134,6 +134,9 @@ button {
     border-radius: .5rem;
 }
 
+/*************************************************************************/
+/*********************** ANIMATION APPEARANCE ***************************/
+/***********************************************************************/
   
 .slide-up {
     opacity: 0;
@@ -163,5 +166,9 @@ button {
     transition-delay: 0.6s;
 }
   
-  
+@keyframes pulse {
+	0% { transform: scale(1); }
+   50% { transform: scale(1.2);}
+   100% { transform: scale(1); }
+}
   

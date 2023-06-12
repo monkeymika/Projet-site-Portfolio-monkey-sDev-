@@ -23,6 +23,16 @@
     }
 }
 
+.steps__arrow {
+    text-align: center;
+
+    i {
+        font-size: 3rem;
+        color: #0ab394;
+        animation: pulse 0.8s infinite;
+    }
+}
+
 
 .steps__content .number.number-active {
     -webkit-background-clip: text; 

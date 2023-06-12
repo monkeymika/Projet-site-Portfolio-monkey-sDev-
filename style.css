@@ -124,6 +124,9 @@ button input {
   border-radius: 0.5rem;
 }
 
+/*************************************************************************/
+/*********************** ANIMATION APPEARANCE ***************************/
+/***********************************************************************/
 .slide-up {
   opacity: 0;
   transform: translateY(50px);
@@ -153,6 +156,17 @@ button input {
   transition-delay: 0.6s;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .sidebar {
   position: fixed;
   width: 110px;
@@ -374,7 +388,7 @@ button input {
 }
 
 .accueil__title {
-  font-size: 12rem;
+  font-size: 10rem;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(0deg, #012326 0%, #014034 30%, #02735e 66%, #0aa67a 100%);
@@ -411,6 +425,10 @@ button input {
   opacity: 0;
   transform: translateY(-30px);
   animation: show 0.8s 0.6s ease-out forwards;
+}
+.accueil__description span {
+  font-weight: 900;
+  color: #0aa67a;
 }
 
 .logo {
@@ -605,6 +623,9 @@ button input {
   text-align: justify;
   padding-right: 6rem;
   margin-bottom: var(--mb-2);
+}
+.presentation__description a {
+  color: #0aa67a;
 }
 
 .presentation__info {
@@ -1286,6 +1307,15 @@ button input {
   transition: 0.3s ease;
 }
 
+.steps__arrow {
+  text-align: center;
+}
+.steps__arrow i {
+  font-size: 3rem;
+  color: #0ab394;
+  animation: pulse 0.8s infinite;
+}
+
 .steps__content .number.number-active {
   -webkit-background-clip: text;
   background-clip: text;
@@ -1580,7 +1610,7 @@ textarea.input {
 }
 
 .footer__bg {
-  padding: 3rem 0 1.5rem;
+  padding: 1rem 0 1.5rem;
 }
 .footer__bg a {
   display: flex;
